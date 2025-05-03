@@ -42,7 +42,7 @@ const addButton = document.getElementById('btn-add');
                         addBody.setAttribute('contenteditable',true);
                     });
 
-                    addBody.addEventListener('blur',function(){
+                    addBody.addEventListener('blur',function(event){
                         event.preventDefault();
                         addBody.removeAttribute('contentEditable');
                         saveNotes();
@@ -53,10 +53,12 @@ const addButton = document.getElementById('btn-add');
             function saveNotes(){
                 const notes = [];
                 document.querySelectorAll("#notes .card").forEach(card => {
-                    const title = card.querySelector('.note-title').innerHTML ;
-                    const body = card.querySelector('.note-body').innerHTML;
+                    const title = card.querySelector('.note-title').innerHTML.trim() ;
+                    const body = card.querySelector('.note-body').innerHTML.trim();
                     
-                    notes.push({ title, body});
+                    if (title !== '' || body !== '') { // Save only if at least one has content
+                        notes.push({ title, body });
+                    }
                 });
                 localStorage.setItem('myNotes',JSON.stringify(notes));
             }
