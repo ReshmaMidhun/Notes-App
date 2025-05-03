@@ -5,7 +5,7 @@ const addButton = document.getElementById('btn-add');
                 const noteElement = document.createElement('div');
                 noteElement.classList.add("col-md-3", "col-sm-6", "col-12");
                 noteElement.innerHTML = `
-                    <div class="card">
+                    <div class="card mb-3">
                     <div class="card-header">
                         <span class="note-title">${noteTitle}</span>
                         <button class="btn-close float-end" ></button>
