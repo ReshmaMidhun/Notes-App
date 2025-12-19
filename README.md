@@ -32,3 +32,9 @@ cd note-app
 
 3. Open index.html in your browser.
 
+
+## 👩‍💻 Author
+Reshma Midhun  
+🔗 [LinkedIn](https://www.linkedin.com/in/reshma-midhun/) | 🔗 [GitHub](https://github.com/ReshmaMidhun)
+
+
